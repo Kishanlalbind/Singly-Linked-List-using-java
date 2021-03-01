@@ -1,4 +1,4 @@
- public class Main{
+ public class SinglyLinkedList{
     private ListNode head;
     private static class ListNode{
         private int data ;
@@ -71,7 +71,7 @@
         previous.next=null;
         return current;
     }
-    //
+    //Delete at a given positions
     public void insert(int position,int value){
         ListNode node=new ListNode(value);
         if(position==1){
@@ -88,9 +88,9 @@
             node.next=current;
         }
     }
-   
+   // Main method
     public static void main(String[] args){
-        Main sll=new Main();
+        SinglyLinkedList sll=new SinglyLinkedList();
         sll.head=new ListNode(10);
         ListNode second=new ListNode(1);
         ListNode third=new ListNode(8);
@@ -99,15 +99,16 @@
         second.next=third;
         third.next=fourth;
        /* sll.disply();
-        sll.length();
+       sll.length();
        sll.insertFirst(3);
        sll.insertLast(6);
        sll.disply();
        sll.deleteFirst();
-       sll.disply();*/
-       //sll.deleteLast();
-       //sll.disply();
+       sll.disply();
+       sll.deleteLast();
+       sll.disply();
        sll.insert(2,1);
        sll.disply();
+       */
     }
 }
